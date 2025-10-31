@@ -1,6 +1,8 @@
 @echo off
 echo Starting app installations...
 
+:: %~dp0 refers to the drive and path of the currently running .bat file.
+:: Apps_installers is the sub folder containing the installers
 cd /d "%~dp0Apps_installers"
 
 :: EXE installers (silent flags vary by app)
@@ -27,4 +29,5 @@ cd /d "%~dp0VPN"
 start /wait "" "FortiClientVPN.exe" /quiet
 
 echo All installations completed.
+
 pause
